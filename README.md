@@ -21,7 +21,7 @@ Some reference links for spring boot actuator:
 - Copy war file and start the tomcat server.
 - Now our endpoints like health, metrics will be available.
 
-[http://localhost:8080/SpringActuator/health](http://localhost:8080/SpringActuator/health)
+[http://localhost:8080/SpringActuatorSample/health](http://localhost:8080/SpringActuatorSample/health)
 
 ```json
 {
@@ -31,7 +31,7 @@ Some reference links for spring boot actuator:
 }
 ```
 
-[http://localhost:8080/SpringActuator/metrics](http://localhost:8080/SpringActuator/metrics)
+[http://localhost:8080/SpringActuatorSample/metrics](http://localhost:8080/SpringActuatorSample/metrics)
 
 ```json
 {
@@ -70,8 +70,8 @@ These end points have been integrated with spring boot admin UI server. Spring a
 
 - Once you click on the details link, Health and Metrics details can be viewed.
 
-![SpringAdmin](http://www.azilen.com/blog/wp-content/uploads/2017/02/Spring-Boot-Admin.png)
+![SpringAdmin](https://github.com/Azilen/Spring-Actuator/blob/Development/SpringAdmin.png)
 
 - When you click on the details button, metrics details can be viewed
 
-![SpringAdminDetails](http://www.azilen.com/blog/wp-content/uploads/2017/02/Spring-Boot-Admin-Details.png)
+![SpringAdminDetails](https://github.com/Azilen/Spring-Actuator/blob/Development/SpringAdminDetails.png)
