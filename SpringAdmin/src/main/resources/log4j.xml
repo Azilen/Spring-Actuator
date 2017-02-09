@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+            <param name="File" value="D:/logs/springbootadmin.log"/>
+                <param name="Threshold" value="DEBUG"/>
+		<param name="Encoding" value="UTF-8"/>
+		<param name="Append" value="false"/>
+		<param name="MaxFileSize" value="20000KB"/>	
+		<param name="MaxBackupIndex" value="10"/>	
+		
+		<layout class="org.apache.log4j.PatternLayout">
+                    <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{10}] %m%n"/>
+		</layout>
+	</appender>
+	
+        <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out"/>
+		<param name="Threshold" value="INFO"/>
+		<param name="Encoding" value="UTF-8"/>
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+		</layout>
+	</appender>
+	
+        <category name="org.springframework">
+            <priority value="INFO" />
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="CONSOLE"/>
+        </category>
+
+	<root>
+            <priority value="DEBUG" />
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="CONSOLE"/>                       
+	</root>
+	
+</log4j:configuration>
