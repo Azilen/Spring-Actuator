@@ -12,7 +12,7 @@ Spring Actuator includes features where you can monitor and manage your spring a
 - You just need to copy this SpringActuator.war to "webapps" folder of your Apache tomcat and start tomcat server.
 - Now try to hit below url to your browser.
 
-[http://localhost:8080/SpringActuatorSample/health](http://localhost:8080/SpringActuatorSample/health)
+[http://localhost:8080/SpringActuator/health](http://localhost:8080/SpringActuator/health)
 
 ```json
 {
@@ -22,7 +22,7 @@ Spring Actuator includes features where you can monitor and manage your spring a
 }
 ```
 
-[http://localhost:8080/SpringActuatorSample/metrics](http://localhost:8080/SpringActuatorSample/metrics)
+[http://localhost:8080/SpringActuator/metrics](http://localhost:8080/SpringActuator/metrics)
 
 ```json
 {
