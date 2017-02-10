@@ -21,7 +21,7 @@ Some reference links for spring boot actuator:
 - Copy war file and start the tomcat server.
 - Now our endpoints like health, metrics will be available.
 
-[http://localhost:8080/SpringActuator/health](http://localhost:8080/SpringActuator/health)
+[http://localhost:8080/SpringActuatorSample/health](http://localhost:8080/SpringActuator/health)
 
 ```json
 {
@@ -31,7 +31,7 @@ Some reference links for spring boot actuator:
 }
 ```
 
-[http://localhost:8080/SpringActuator/metrics](http://localhost:8080/SpringActuator/metrics)
+[http://localhost:8080/SpringActuatorSample/metrics](http://localhost:8080/SpringActuator/metrics)
 
 ```json
 {
