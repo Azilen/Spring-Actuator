@@ -15,5 +15,5 @@ SpringAdmin is simple admin interface for Spring boot and SpringActuator applica
 
 You will be able to see Spring admin ui where spring boot and spring actuator application will be registered.
 
-![SpringAdmin](https://github.com/Azilen/Spring-Actuator/blob/Development/SpringAdmin.png)
+![SpringAdmin](http://www.azilen.com/blog/wp-content/uploads/2017/02/Spring-Boot-Admin.png)
 	
