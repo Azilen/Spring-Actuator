@@ -103,7 +103,8 @@ Some reference links for spring boot actuator:
     "status": "UP",
     "version": "3.9.0"
   }
-}```
+}
+```
 
 [http://localhost:8080/SpringMVCCassandraActuator/metrics](http://localhost:8080/SpringMVCCassandraActuator/metrics)
 
