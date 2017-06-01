@@ -23,6 +23,12 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>com.azilen.spring</groupId>
+			<artifactId>springactuator</artifactId>
+			<version>0.2</version>
+		</dependency>
+		
 		<!-- Spring Data Cassandra -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
@@ -86,13 +92,8 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.azilen.spring</groupId>
-			<artifactId>springactuator</artifactId>
-			<version>0.2</version>
-		</dependency>
-
 	</dependencies>
+	
 	<build>
 		<finalName>SpringMVCCassandraActuator</finalName>
 		<plugins>
