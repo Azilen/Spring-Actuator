@@ -144,8 +144,8 @@ These end points have been integrated with spring boot admin UI server. Spring a
 
 - Once you click on the details link, Health and Metrics details can be viewed.
 
-![SpringAdmin](http://www.azilen.com/blog/wp-content/uploads/2017/02/Spring-Boot-Admin.png)
+![SpringAdmin](http://www.azilen.com/blog/wp-content/uploads/2017/06/1.png)
 
 - When you click on the details button, metrics details can be viewed
 
-![SpringAdminDetails](http://www.azilen.com/blog/wp-content/uploads/2017/02/Spring-Boot-Admin-Details.png)
+![SpringAdminDetails](http://www.azilen.com/blog/wp-content/uploads/2017/06/2.png)
