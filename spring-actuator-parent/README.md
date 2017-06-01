@@ -5,6 +5,6 @@
     <parent>
         <groupId>com.azilen.spring</groupId>
         <artifactId>spring-actuator-parent</artifactId>
-        <version>0.1</version>
+        <version>1.0</version>
     </parent>
     ```
