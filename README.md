@@ -23,27 +23,30 @@ Some reference links for spring boot actuator:
 - Your project must be maven based project.
 
 ### Steps to integrate Spring Actuator with your application
-- Download **springactuator** library and install it in your local repository.
-    ** mvn clean install**
-- Download **spring-actuator-parent** library and install it in your local repository.
-    ** mvn clean install**
+- Download **springactuator** library and install it in your local repository.<br />
+    ``` mvn clean install ```
+- Download **spring-actuator-parent** library and install it in your local repository.<br />
+    ``` mvn clean install ```
 - Add spring-actuator-parent in the <parent></parent> tag in the pom.xml in your Spring Application which is to be monitored,so that the required dependencies will be added.
+    ``` xml
     <parent>
-		<groupId>com.azilen.spring</groupId>
-		<artifactId>spring-actuator-parent</artifactId>
-		<version>0.1</version>
-	</parent>
-    
+	<groupId>com.azilen.spring</groupId>
+	<artifactId>spring-actuator-parent</artifactId>
+	<version>0.1</version>
+    </parent>
+    ```
 - Add springactuator dependency in the pom.xml in your Spring Application which is to be monitored,so that the required dependencies will be added.
+    ``` 
     <dependency>
         <groupId>com.azilen.spring</groupId>
         <artifactId>springactuator</artifactId>
         <version>0.1</version>
     </dependency>
-
+    ```
 - You will require to scan **springactuator** packages in your application.
 - i.e. if your project has xml based configuration add below line
-    <context:component-scan base-package="com.azilen.spring.*" />
+
+    ```java <context:component-scan base-package="com.azilen.spring.*" /> ```
 
 - Add Spring-admin.properties file in the classpath of the Spring Application which is to be monitored. It should be added in the resources folder.
 - i.e. You can configure properties as below
