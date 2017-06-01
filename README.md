@@ -3,7 +3,7 @@
 Spring Actuator is the spring based component, which contains features based on spring boot actuator.
 It helps to monitor and manage application's health and provide features such as status of application, disk information, database status and other statistics. This information can be retrieved by hitting certain endpoints. Only two end points health metrics have been implemented recently by us.
 
-- **P.S. Spring Actuator Version : 0.1**
+- **P.S. Spring Actuator Version : 1.0**
 - **P.S. Spring Version : 4.3.4.RELEASE**
 
 ### What is Spring Boot Actuator?
@@ -32,7 +32,7 @@ Some reference links for spring boot actuator:
     <parent>
 		<groupId>com.azilen.spring</groupId>
 		<artifactId>spring-actuator-parent</artifactId>
-		<version>0.1</version>
+		<version>1.0</version>
     </parent>
     ```
 - Add springactuator dependency in the pom.xml in your Spring Application which is to be monitored,so that the required dependencies will be added.
@@ -40,7 +40,7 @@ Some reference links for spring boot actuator:
     <dependency>
 		<groupId>com.azilen.spring</groupId>
 		<artifactId>springactuator</artifactId>
-		<version>0.1</version>
+		<version>1.0</version>
     </dependency>
     ```
 - You will require to scan **springactuator** packages in your application.
