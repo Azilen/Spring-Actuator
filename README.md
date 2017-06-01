@@ -3,8 +3,8 @@
 Spring Actuator is the spring based component, which contains features based on spring boot actuator.
 It helps to monitor and manage application's health and provide features such as status of application, disk information, database status and other statistics. This information can be retrieved by hitting certain endpoints. Only two end points health metrics have been implemented recently by us.
 
-- **P.S. Spring Actuator Version :- 0.1**
-- **P.S. Spring Version :- 4.3.4.RELEASE**
+- **P.S. Spring Actuator Version : 0.1**
+- **P.S. Spring Version : 4.3.4.RELEASE**
 
 ### What is Spring Boot Actuator?
 
@@ -15,15 +15,43 @@ Some reference links for spring boot actuator:
 - [http://javabeat.net/spring-boot-actuator/](http://javabeat.net/spring-boot-actuator/)
 - [https://spring.io/guides/gs/actuator-service/](https://spring.io/guides/gs/actuator-service/)
 
-### Steps to start the Spring Actuator project
+### Prerequisite
 
-- Install Install MongoDB/Cassandra in your machine and start it as windows service.
-- Add spring-actuator-classes as a dependency in the pom.xml of the Spring Application which is to be monitored.
-- Add the actuator package (i.e. com.azilen.*) in the component scan of the Spring Application which is to be monitored.For e.g:- <context:component-scan base-package=”com.demo.*,com.azilen.*”/> where com.demo.* is the base package of the Spring Application which is to be monitored using spring actuator.
-- Add Spring-admin.properties file in the classpath of the Spring Application which is to be monitored, so if it is following the maven webapp project structure,it should be added in the resources folder.
-- Add spring-actuator-parent in the <parent></parent> tag in the pom.xml in the Spring Application which is to be monitored,so that the required dependencies are added.
+- Your project must be in Spring 4.3.4 RELEASE or above.
+- Your project must use MongoDB or Cassandra database.
+- Install MongoDB/Cassandra in your machine and start it as service.
+- Your project must be maven based project.
 
-- As of now we have developed the spring-actuator keeping the following versions
+### Steps to integrate Spring Actuator with your application
+- Download **springactuator** library and install it in your local repository.
+    ** mvn clean install**
+- Download **spring-actuator-parent** library and install it in your local repository.
+    ** mvn clean install**
+- Add spring-actuator-parent in the <parent></parent> tag in the pom.xml in your Spring Application which is to be monitored,so that the required dependencies will be added.
+    <parent>
+		<groupId>com.azilen.spring</groupId>
+		<artifactId>spring-actuator-parent</artifactId>
+		<version>0.1</version>
+	</parent>
+    
+- Add springactuator dependency in the pom.xml in your Spring Application which is to be monitored,so that the required dependencies will be added.
+    <dependency>
+        <groupId>com.azilen.spring</groupId>
+        <artifactId>springactuator</artifactId>
+        <version>0.1</version>
+    </dependency>
+
+- You will require to scan **springactuator** packages in your application.
+- i.e. if your project has xml based configuration add below line
+    <context:component-scan base-package="com.azilen.spring.*" />
+
+- Add Spring-admin.properties file in the classpath of the Spring Application which is to be monitored. It should be added in the resources folder.
+- i.e. You can configure properties as below
+    - server.displayName=SpringMVCMongoDBActuator
+    - spring.boot.admin.url=http://localhost:8081
+    - info.app.version=This is SpringMVCMongoDBActuator app version
+
+- We have developed the spring-actuator keeping the following versions
     - Spring to be 4.3.4.RELEASE
     - spring-data-mongodb to be 1.9.4.RELEASE
     - mongo-java-driver to be 3.2.2
@@ -31,6 +59,8 @@ Some reference links for spring boot actuator:
     - spring-data-couchbase to be 2.1.4.RELEASE
     - java-client to be 2.2.8
     - spring-data-cassandra to be 1.5.1.RELEASE
+
+- build war file of your spring application.
 
 - Copy war file and start the tomcat server.
 
