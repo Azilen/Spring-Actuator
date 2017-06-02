@@ -8,7 +8,7 @@ It helps to monitor and manage application's health and provide features such as
 
 ### What is Spring Boot Actuator?
 
-Actuator module in spring boot helps application developers to implement the features like metrics, health check, security, etc. with minimal effort.
+Spring boot Actuator module in spring boot framework helps application developers to implement the features like metrics, health check, security, etc. with minimal effort.
 
 Some reference links for spring boot actuator:
 - [http://www.tutorialspoint.com/articles/spring-boot-actuator-a-production-grade-feature-in-spring-boot](http://www.tutorialspoint.com/articles/spring-boot-actuator-a-production-grade-feature-in-spring-boot)
@@ -17,12 +17,12 @@ Some reference links for spring boot actuator:
 
 ### Spring Actuator Version : 1.0
 
-- Prerequisite
+- ## Prerequisite
 
 1. Your project must be in Spring 4.3.4 RELEASE or above.
 2. Your project must use MongoDB or Cassandra database.
 
-- Integration with Spring application
+- ## Integration with Spring application
 1. Download **springactuator** library and install it in your local repository.<br />
     ``` mvn clean install ```
 2. Download **spring-actuator-parent** library and install it in your local repository.<br />
@@ -44,14 +44,16 @@ Some reference links for spring boot actuator:
     </dependency>
     ```
 5. You will require to scan **springactuator** packages in your application.
-6. i.e. if your project has xml based configuration add below line
+
+6. If your project has xml based configuration add below line
 
     ``` xml 
     <context:component-scan base-package="com.azilen.spring.*" /> 
     ```
 
 7. Add Spring-admin.properties file in the classpath of the Spring Application which is to be monitored. It should be added in the resources folder.
-8. i.e. You can configure properties as below
+
+8. You can configure properties as below
     - server.displayName=SpringMVCMongoDBActuator
     - spring.boot.admin.url=http://localhost:8081
     - info.app.version=This is SpringMVCMongoDBActuator app version
@@ -175,14 +177,14 @@ Some reference links for spring boot actuator:
 }
 ```
 
-These end points have been integrated with spring boot admin UI server. Spring admin server needs to be started to view admin server. Automatic registration of application will be done to spring admin server once the admin server is running the Spring Actuator sample.
+13. These end points have been integrated with spring boot admin UI server. Spring admin server needs to be started to view admin server. Automatic registration of application will be done to spring admin server once the admin server is running the Spring Actuator sample.
 
 [http://localhost:8081/](http://localhost:8081/)
 
-13. Once you click on the details link, Health and Metrics details can be viewed.
+14. Once you click on the details link, Health and Metrics details can be viewed.
 
 ![SpringAdmin](http://www.azilen.com/blog/wp-content/uploads/2017/06/1.png)
 
-14. When you click on the details button, metrics details can be viewed
+15. When you click on the details button, metrics details can be viewed
 
 ![SpringAdminDetails](http://www.azilen.com/blog/wp-content/uploads/2017/06/2.png)
