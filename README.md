@@ -179,7 +179,7 @@ Some reference links for spring boot actuator:
 
 13. These end points have been integrated with spring boot admin UI server. Spring admin server needs to be started to view admin server. Automatic registration of application will be done to spring admin server once the admin server is running the Spring Actuator sample.
 
-[http://localhost:8081/](http://localhost:8081/)
+Spring Admin UI server : [http://localhost:8081/](http://localhost:8081/)
 
 14. Once you click on the details link, Health and Metrics details can be viewed.
 
