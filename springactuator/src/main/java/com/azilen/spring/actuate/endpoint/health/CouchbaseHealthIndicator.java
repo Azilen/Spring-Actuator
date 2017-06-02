@@ -40,10 +40,6 @@ public class CouchbaseHealthIndicator extends AbstractHealthIndicator{
 				nodeName = bucket.bucketManager().info().nodeList().get(i).getHostName();
 				nodeAddress = bucket.bucketManager().info().nodeList().get(i).getHostAddress();
 				isNodeReachable=bucket.bucketManager().info().nodeList().get(i).isReachable(timeoutInMs);
-				System.out.println("node name-->"+nodeName);
-				System.out.println("node address-->"+nodeAddress);
-				System.out.println("Address-->"+bucket.bucketManager().info().nodeList().get(i).getAddress());
-				System.out.println("Is node reachable-->"+isNodeReachable);
 				nodeDetails.put(nodeAddress,isNodeReachable);
 			}
 			/*End :: Fetching node details*/

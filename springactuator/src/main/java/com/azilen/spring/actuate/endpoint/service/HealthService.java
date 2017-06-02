@@ -65,7 +65,6 @@ public class HealthService {
 	private void mongoHealthCheck(Health.Builder mongoBuilder, String code) {
 		try {
 			if (mongoTemplate != null) {
-				logger.info("Inside mongoTemplate is available");
 				MongoHealthIndicator mongoHealthIndicator = new MongoHealthIndicator(mongoTemplate);
 				mongoHealthIndicator.doHealthCheck(mongoBuilder);
 			}
@@ -85,28 +84,21 @@ public class HealthService {
 		int nodeCount = 0;
 		try {
 			if (couchbaseOperations != null) {
-				logger.info("Inside couchbaseOperations");
 
 				CouchbaseHealthIndicator couchbaseHealthIndicator = new CouchbaseHealthIndicator(couchbaseOperations);
 				couchbaseHealthIndicator.doHealthCheck(couchbaseBuilder);
 				Integer timeoutInMs = 2000;
 				Bucket bucket = this.couchbaseOperations.getCouchbaseBucket();
-				logger.info("node size---->" + bucket.bucketManager().info().nodeList().size());
-				logger.info("node size---->" + bucket.bucketManager().info().nodeCount());
 				nodeCount = bucket.bucketManager().info().nodeCount();
 				Boolean[] isReachableArray = new Boolean[nodeCount];
 				for (int i = 0; i < nodeCount; i++) {
 					isReachableArray[i] = bucket.bucketManager().info().nodeList().get(i).isReachable(timeoutInMs);
 				}
-				logger.info("isReachable array size-->" + isReachableArray.length);
 				if (Arrays.asList(isReachableArray).contains(true)) {
-					logger.info("Inside if");
 					isReachable = true;
 				} else {
-					logger.info("Inside else");
 					isReachable = false;
 				}
-				logger.info("isReachable-->" + isReachable);
 				if (!isReachable) {
 					throw new Exception("Not able to access the couchbase server");
 				}
@@ -143,7 +135,6 @@ public class HealthService {
 	}
 
 	public Object getHealthDetails(HealthMvcEndpointProperties healthMvcEndpointProperties) {
-		logger.info("updated code");
 		DiskSpaceHealthIndicator diskSpaceHealthIndicator = new DiskSpaceHealthIndicator(
 				new DiskSpaceHealthIndicatorProperties());
 		Health.Builder builder = new Health.Builder();
