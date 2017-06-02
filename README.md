@@ -3,6 +3,9 @@
 Spring Actuator is the spring based component, which contains features based on spring boot actuator.
 It helps to monitor and manage application's health and provide features such as status of application, disk information, database status and other statistics. This information can be retrieved by hitting certain endpoints. Only two end points health metrics have been implemented recently by us.
 
+- Health Endpoint  : health endpoint provides basic application health information.
+- Metrics Endpoint : Shows ‘metrics’ information for the spring application.
+
 - **P.S. Spring Actuator Version : 1.0**
 - **P.S. Spring Version : 4.3.4.RELEASE**
 
